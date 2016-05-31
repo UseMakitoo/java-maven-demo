@@ -10,13 +10,27 @@
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
+        <makitoo.version>0.0.14</makitoo.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>makitoo</id>
+            <url>https://dashboard.makitoo.com/repo</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>makitoo</id>
+            <url>https://dashboard.makitoo.com/repo</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
             <groupId>com.makitoo</groupId>
             <artifactId>makitoo-library-java</artifactId>
-            <version>0.0.11</version>
+            <version>${makitoo.version}</version>
         </dependency>
     </dependencies>
 
@@ -25,7 +39,7 @@
             <plugin>
                 <groupId>com.makitoo</groupId>
                 <artifactId>makitoo-maven-plugin</artifactId>
-                <version>0.0.11</version>
+                <version>${makitoo.version}</version>
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
